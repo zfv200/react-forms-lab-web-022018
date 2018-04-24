@@ -9,6 +9,12 @@ const login = ({ username, password }) => {
   console.log(`Logging in ${username} with password ${password}`);
 };
 
+// const myFunc = (event) => {
+//   event.preventDefault();
+//
+//   console.log(`wut`)
+// }
+
 ReactDOM.render(
   <div>
     <h1>
