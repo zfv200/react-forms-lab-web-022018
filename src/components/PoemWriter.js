@@ -14,7 +14,7 @@ class PoemWriter extends React.Component {
     this.setState({
       value: event.target.value
     })
-    let lined = event.target.value.split(/\n/g)
+    let lined = event.target.value.split(/\n/g).map(line=>line.trim())
     if (lined.length===3){
       if (lined[0].slice(0, -1).split(" ").length===5 && lined[1].slice(0, -1).split(" ").length===3 && lined[2].slice(0, -1).split(" ").length===5){
         this.setState({
