@@ -71,14 +71,14 @@ describe("<PoemWriter />", () => {
     });
 
     it("should not show an error when the poem is valid but has extra whitespace", () => {
-      // const wrapper = shallow(<PoemWriter />);
-      // wrapper.find("textarea").simulate("change", {
-      //   target: { value: VALID_POEM_WITH_EXTRA_WHITESPACE },
-      // });
-      // expect(wrapper.find("#poem-validation-error").length).to.equal(
-      //   0,
-      //   "The poem validation error is being shown"
-      // );
+      const wrapper = shallow(<PoemWriter />);
+      wrapper.find("textarea").simulate("change", {
+        target: { value: VALID_POEM_WITH_EXTRA_WHITESPACE },
+      });
+      expect(wrapper.find("#poem-validation-error").length).to.equal(
+        0,
+        "The poem validation error is being shown"
+      );
     });
   });
 });
